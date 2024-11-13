@@ -6,22 +6,20 @@ import { PagesComponent } from "../../pages/PagesComponent"
 export const AdminLayoutComponent = () => {
   return (
     <>
-      <div className="h-screen flex flex-col p-4">
-        <div className="h-[15%]">
+      <div className="h-screen flex flex-col p-4 overflow-hidden">
+        <div className="h-[10%] flex">
           <NavbarComponent />
         </div>
-        <div className="flex flex-row h-full">
+        <div className="flex flex-row flex-grow">
           <div className="basis-[70px]">
             <SidebarComponent />
           </div>
-          <div className="grow">
-            <div className="flex flex-col h-full">
-              <div className="h-[90%]">
-                <PagesComponent />
-              </div>
-              <div className="h-[10%]">
-                <FooterComponent />
-              </div>
+          <div className="grow flex flex-col">
+            <div className="flex-grow overflow-auto">
+              <PagesComponent />
+            </div>
+            <div className="h-[10%]">
+              <FooterComponent />
             </div>
           </div>
         </div>

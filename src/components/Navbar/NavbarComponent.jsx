@@ -1,33 +1,24 @@
-import { CiUser } from "react-icons/ci";
-import { CiCloudMoon } from "react-icons/ci";
-import { CiBellOn } from "react-icons/ci";
+import { CiUser, CiCloudMoon, CiBellOn } from "react-icons/ci";
+import { TextField } from '@mui/material';
 
 export const NavbarComponent = () => {
   return (
-    <>
-      <div className="h-full flex flex-row flex-wrap mx-2 p-2">
-        <div className="flex flex-1 flex-row items-center justify-between gap-4"> {/* Flex-row aplicado aquí */}
-          <div className="flex flex-row items-center justify-center gap-4">
-            <div>
-              <CiCloudMoon className="px-2" size={45} color="white" />
-            </div>
-            <div>
-              <h1 className="Logo-Title text-white">Equinoccio</h1>
-            </div>
-          </div>
-          <div>
-            <input type="text" placeholder="Buscar" />
-          </div>
-        </div>
-        <div className="flex flex-1 flex-row items-center justify-end gap-4"> {/* Flex-row aplicado aquí */}
-          <div>
-            <CiBellOn className="icon-nav" size={45} color="white" />
-          </div>
-          <div>
-            <CiUser className="icon-nav" size={45} color="white" />
-          </div>
-        </div>
+    <div className="flex flex-row items-center justify-between h-full w-full mx-2 p-2"> {/* Asegúrate de que ocupe toda la altura */}
+      <div className="flex flex-row items-center justify-start gap-4"> {/* Cambiar justify-center a justify-start */}
+        <CiCloudMoon className="px-2" size={45} color="white" />
+        <h1 className="Logo-Title text-white">Equinoccio</h1>
       </div>
-    </>
+      <div className="flex flex-grow justify-center items-center mx-4"> {/* Añadido mx-4 para espacio en los lados */}
+        <TextField 
+          id="outlined-basic" 
+          label="Search"
+          className="w-[200px]"
+        />
+      </div>
+      <div className="flex flex-row items-center justify-end gap-4">
+        <CiBellOn className="icon-nav" size={45} color="white" />
+        <CiUser className="icon-nav" size={45} color="white" />
+      </div>
+    </div>
   );
 };

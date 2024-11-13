@@ -1,10 +1,14 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
+import App from './App';
 import './index.css'
-import App from './App.jsx'
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './components/common/theme.jsx'; // Importar el tema que creaste
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <ThemeProvider theme={theme}> {/* Usar el tema aquí */}
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  </ThemeProvider>
+);
