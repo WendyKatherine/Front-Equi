@@ -1,7 +1,7 @@
-import book1 from '../../assets/img/book1.webp';
-import book2 from '../../assets/img/book2.webp';
-import book3 from '../../assets/img/book3.jpg';
-import book4 from '../../assets/img/book4.webp';
+import book1 from '../../../assets/img/book1.webp';
+import book2 from '../../../assets/img/book2.webp';
+import book3 from '../../../assets/img/book3.jpg';
+import book4 from '../../../assets/img/book4.webp';
 import { Button } from '@mui/material';
 import { Typography } from '@mui/material';
 

@@ -4,6 +4,13 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   components: {
+    palette: {
+      mode: 'dark',  // Esto ayuda a que todo sea más oscuro, lo cual resalta el texto blanco
+      text: {
+        primary: '#FFFFFF',  // Texto principal en blanco
+        secondary: '#FFFFFF',  // Texto secundario en blanco
+      },
+    },
     MuiOutlinedInput: {
       styleOverrides: {
         root: {
@@ -23,13 +30,35 @@ const theme = createTheme({
         }
       },
     },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          color: '#FFFFFF',  // Texto de los inputs en blanco
+          '& .MuiInputLabel-root': { color: '#FFFFFF' },  // Color de las etiquetas en blanco
+          '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+              borderColor: '#FFFFFF',  // Bordes en blanco
+            },
+            '&:hover fieldset': {
+              borderColor: '#FFFFFF',  // Bordes al pasar el cursor en blanco
+            },
+            '&.Mui-focused fieldset': {
+              borderColor: '#FFFFFF',  // Bordes cuando el input está enfocado en blanco
+            },
+            '& input': {
+              color: '#FFFFFF',  // Texto dentro del input en blanco
+            },
+          },
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
           background: '#2B2B2B',
-          border: '1px solid white',
+          border: 'none',
           color: 'white',
-          fontFamily: '"Quicksand", sans-serif',
+          fontFamily: '"Quicksand", sans-serif'
         }
       },
     },

@@ -1,11 +1,11 @@
 import './App.css'
-import { AdminLayoutComponent } from './layouts/AdminLayout/AdminLayoutComponent'
+import { Routing } from './router/Routing'
 
 function App() {
 
   return (
     <div className='bg-dark-black'>
-      <AdminLayoutComponent />
+      <Routing />
     </div>
   )
 }

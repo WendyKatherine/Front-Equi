@@ -21,10 +21,22 @@ p {
     font-family: "Inter", sans-serif;
 }
 
-.icon-nav{
+.icon-nav {
     background-color: #232323;
     padding: 10px;
     border-radius: 40%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-nav:hover {
+    background: linear-gradient(90deg, rgba(46, 234, 168, 0.474) 0%, rgba(2, 138, 242, 0.523) 100%);
+    cursor: pointer;
+    transform: scale(1.1); /* Agregar un efecto de zoom */
+}
+
+.icon-nav:active {
+    background: linear-gradient(90deg, rgba(2, 138, 242, 0.523) 0%, rgba(46, 234, 168, 0.474) 100%);
+    transform: scale(1); /* Reducir el zoom al tamaño original */
 }
 
 input{
@@ -56,4 +68,34 @@ p{
     font-size: 16px;
     font-weight: 300;
     color: white;
+}
+
+/* Estilo para la barra de desplazamiento */
+.custom-scroll::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra */
+    background-color: #2a2a2a; /* Color de fondo del track */
+  }
+  
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a; /* Color de la barra */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #6a6a6a; /* Color al pasar el mouse */
+  }
+
+.background-img{
+    background-image: linear-gradient(90deg, rgba(46, 234, 168, 0.474) 0%, rgba(2, 138, 242, 0.523) 100%), url(/src/assets/img/login.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.background-gradient{
+    background: linear-gradient(30deg, rgba(2, 138, 242, 0.523) 0%, rgba(46, 234, 168, 0.474) 100%);
+}
+
+.img-user{
+    padding: 1rem;
+    border-radius: 3rem;
 }
